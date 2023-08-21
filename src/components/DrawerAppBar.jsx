@@ -49,7 +49,7 @@ function DrawerAppBar(props) {
   return (
     <Box sx={{ display: 'flex' }}>
       <CssBaseline />
-      <AppBar component="nav" className="navbar">
+      <AppBar component="nav" sx ={{bgcolor:"transparent"}} >
         <Toolbar>
           <IconButton
             color="inherit"
@@ -69,7 +69,7 @@ function DrawerAppBar(props) {
           </Typography>
           <Box sx={{ display: { xs: 'none', sm: 'block' } }}>
             {navItems.map((item) => (
-              <Button key={item} sx={{ color: '#000' }}>
+              <Button key={item} sx={{ color: '#fff' }}>
                 {item}
               </Button>
             ))}
@@ -82,7 +82,7 @@ function DrawerAppBar(props) {
           variant="temporary"
           open={mobileOpen}
           onClose={handleDrawerToggle}
-          ModalProps={{
+          ModalProps={{ 
             keepMounted: true, // Better open performance on mobile.
           }}
           sx={{
