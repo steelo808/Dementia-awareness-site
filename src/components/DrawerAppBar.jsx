@@ -49,7 +49,7 @@ function DrawerAppBar(props) {
   return (
     <Box sx={{ display: 'flex' }}>
       <CssBaseline />
-      <AppBar component="nav" sx ={{bgcolor:"transparent"}} >
+      <AppBar component="nav" sx ={{bgcolor:"#fff", color:"#000", border:0}} >
         <Toolbar>
           <IconButton
             color="inherit"
@@ -69,7 +69,7 @@ function DrawerAppBar(props) {
           </Typography>
           <Box sx={{ display: { xs: 'none', sm: 'block' } }}>
             {navItems.map((item) => (
-              <Button key={item} sx={{ color: '#fff' }}>
+              <Button key={item} sx={{ color: '#000' }}>
                 {item}
               </Button>
             ))}
