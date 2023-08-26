@@ -13,7 +13,11 @@ import ListItemText from "@mui/material/ListItemText";
 import MenuIcon from "@mui/icons-material/Menu";
 import Toolbar from "@mui/material/Toolbar";
 import Typography from "@mui/material/Typography";
+import Stack from '@mui/material/Stack';
 import Button from "@mui/material/Button";
+import Container  from "@mui/system/Container";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faBrain } from "@fortawesome/free-solid-svg-icons";
 
 const drawerWidth = 240;
 const navItems = ['Home', 'About', 'Contact'];
@@ -28,15 +32,15 @@ function DrawerAppBar(props) {
  
   const drawer = (
     <Box onClick={handleDrawerToggle} sx={{ textAlign: 'center' }}>
-      <Typography variant="h6" sx={{ my: 2 }}>
-        LOGO
-      </Typography>
+    <Typography variant="h6" sx={{ my: 2 }}>
+    <FontAwesomeIcon icon={faBrain} className="drawer-logo"/>
+    </Typography>
       <Divider />
       <List>
         {navItems.map((item) => (
           <ListItem key={item} disablePadding>
             <ListItemButton sx={{ textAlign: 'center' }}>
-              <ListItemText primary={item} />
+              <ListItemText primary={item} sx={{color:"#0b0018"}}/>
             </ListItemButton>
           </ListItem>
         ))}
@@ -49,7 +53,8 @@ function DrawerAppBar(props) {
   return (
     <Box sx={{ display: 'flex' }}>
       <CssBaseline />
-      <AppBar component="nav" sx ={{bgcolor:"#fff", color:"#000", border:0}} >
+      <AppBar component="nav" sx ={{bgcolor:"#ffba00", color:"#000", border:0}} >
+      <Container maxWidth ="md">
         <Toolbar>
           <IconButton
             color="inherit"
@@ -60,21 +65,27 @@ function DrawerAppBar(props) {
           >
             <MenuIcon />
           </IconButton>
+          
           <Typography
             variant="h6"
             component="div"
             sx={{ flexGrow: 1, display: { xs: 'none', sm: 'block' } }}
           >
-            LOGO
+          <Stack direction="row" alignItems="center" spacing={1} >
+          <FontAwesomeIcon icon={faBrain} />
+          <Typography variant="p" sx={{ fontSize:'0.6rem', textTransform:'uppercase'}}>LetsEndDementia.org</Typography>
+          </Stack>
           </Typography>
+          
           <Box sx={{ display: { xs: 'none', sm: 'block' } }}>
             {navItems.map((item) => (
-              <Button key={item} sx={{ color: '#000' }}>
+              <Button key={item} sx={{ color: '#0b0018', fontSize:"0.8rem", letterSpacing:"1px" }}>
                 {item}
               </Button>
             ))}
           </Box>
         </Toolbar>
+        </Container>
       </AppBar>
       <Box component="nav">
         <Drawer
