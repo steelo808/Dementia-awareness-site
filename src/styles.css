@@ -60,7 +60,6 @@ video{
 .header h1{
     font-size:3rem;
     text-transform: uppercase;
-    letter-spacing:1px;
     border-bottom:3px solid var(--accent-color);
     text-align:center;
 }
@@ -88,3 +87,22 @@ video{
     height:100%;
     background-color: rbga(0,0,0,0,5);
 }
+
+
+
+/* ABOUT DEMENTIA SECTION */
+
+.about-dementia{
+    background: rgb(0,0,0);
+    background: -moz-linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(11,0,24,1) 56%);
+    background: -webkit-linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(11,0,24,1) 56%);
+    background: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(11,0,24,1) 56%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#000000",endColorstr="#0b0018",GradientType=1);
+    height:auto;
+    display:flex;
+    justify-content: center;
+    align-items:center;
+    padding:30px 0;
+}
+
+

@@ -1,5 +1,7 @@
 import Header from './components/Header';
-import DrawerAppBar from './components/DrawerAppBar';
+import AboutDementia from './components/AboutDementia';
+import WhatIsDementia from './components/WhatIsDementia';
+
 
 function App() {
   
@@ -7,6 +9,8 @@ function App() {
   return (
     <>
       <Header />
+      <AboutDementia />
+      <WhatIsDementia />
     </>
   )
 }
